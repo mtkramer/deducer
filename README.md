@@ -1,3 +1,26 @@
+# Deducer (under construction)
+Image style auto-painter
+
+# Overview
+A website that allows users to upload images and produces stylized output from the image scan.
+
+# Features
+* User account registration and login
+* User histories
+* Email notifications when image processing has completed 
+
+# What I Learned
+* Improved JS/HTML/CSS skills
+* Login/Authentication review
+* Understanding and use of convolution neural networks
+* Deep learning frameworks
+
+# Possible Future Updates
+* Multiple file type support
+* Image filters
+
+includes code from neural-style
+
 # neural-style [[![Build Status](https://travis-ci.com/anishathalye/neural-style.svg?branch=master)](https://travis-ci.com/anishathalye/neural-style)]
 
 An implementation of [neural style][paper] in TensorFlow.

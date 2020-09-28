@@ -1,4 +1,21 @@
 numpy
 Pillow  # provides PIL
 scipy==1.1
-tensorflow-gpu >= 1.0,<2.0  # installs tensorflow with GPU support, should still work even without GPU
+tensorflow-gpu # installs tensorflow with GPU support, should still work even without GPU
+
+# make tensorflow 1.X compatible with tensorflow-gpu 2.X
+
+# replace line 9 of vgg.py
+# config = tf.ConfigProto()
+# with
+# config = tf.compat.v1.ConfigProto()
+
+# replace line 10 of vgg.py
+# config.gpu_options.allow_growth = True
+# with
+# gpu_devices = tf.config.experimental.list_physical_devices('GPU')
+# for device in gpu_devices:
+#    tf.config.experimental.set_memory_growth(device, True)
+
+#replace line 11 with vgg.py sess = tf.Session(config=config)
+# sess = tf.compat.v1.Session(config=config)

@@ -6,9 +6,11 @@ import scipy.io
 
 # work-around for more recent versions of tensorflow
 # https://github.com/tensorflow/tensorflow/issues/24496
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-sess = tf.Session(config=config)
+config = tf.compat.v1.ConfigProto()
+gpu_devices = tf.config.experimental.list_physical_devices('GPU')
+for device in gpu_devices:
+    tf.config.experimental.set_memory_growth(device, True)
+sess = tf.compat.v1.Session(config=config)
 
 VGG19_LAYERS = (
     'conv1_1', 'relu1_1', 'conv1_2', 'relu1_2', 'pool1',
@@ -25,6 +27,7 @@ VGG19_LAYERS = (
     'relu5_3', 'conv5_4', 'relu5_4'
 )
 
+
 def load_net(data_path):
     data = scipy.io.loadmat(data_path)
     if 'normalization' in data:
@@ -37,6 +40,7 @@ def load_net(data_path):
         mean_pixel = data['meta']['normalization'][0][0][0][0][2][0][0]
     weights = data['layers'][0]
     return weights, mean_pixel
+
 
 def net_preloaded(weights, input_image, pooling):
     net = {}
@@ -64,19 +68,21 @@ def net_preloaded(weights, input_image, pooling):
     assert len(net) == len(VGG19_LAYERS)
     return net
 
+
 def _conv_layer(input, weights, bias):
     conv = tf.nn.conv2d(input, tf.constant(weights), strides=(1, 1, 1, 1),
-            padding='SAME')
+                        padding='SAME')
     return tf.nn.bias_add(conv, bias)
 
 
 def _pool_layer(input, pooling):
     if pooling == 'avg':
         return tf.nn.avg_pool(input, ksize=(1, 2, 2, 1), strides=(1, 2, 2, 1),
-                padding='SAME')
+                              padding='SAME')
     else:
         return tf.nn.max_pool(input, ksize=(1, 2, 2, 1), strides=(1, 2, 2, 1),
-                padding='SAME')
+                              padding='SAME')
+
 
 def preprocess(image, mean_pixel):
     return image - mean_pixel

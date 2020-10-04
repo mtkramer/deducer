@@ -20,9 +20,9 @@ A website that allows users to upload images and produces stylized output from t
 * Image filters
 
 ## License
-Copyright (c) 2020 Michael Kramer. Released under GPLv3. See
-[LICENSE.txt][license] for details.
-Copyright (c) 2015-2019 Anish Athalye. Released under GPLv3. 
+Copyright (c) 2020 Michael Kramer. Released under GPLv3.
+
+See [LICENSE.txt][license] for details.
 
 [net]: https://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-19.mat
 [paper]: http://arxiv.org/pdf/1508.06576v2.pdf

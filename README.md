@@ -7,7 +7,7 @@ A website that allows users to upload images and produces stylized output from t
 # Features
 * Sample images and styles
 * User image uploads
-* No database required
+* No database queries unless user creates account
 
 # What I Learned
 * Improved JS/HTML/CSS skills

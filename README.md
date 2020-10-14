@@ -41,6 +41,6 @@ See [LICENSE.txt][license] for details.
   title = {Neural Style},
   year = {2015},
   howpublished = {\url{https://github.com/anishathalye/neural-style}},
-  note = {commit xxxxxxx}
+  note = {commit 202d796}
 }
 ```

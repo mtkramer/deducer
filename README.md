@@ -11,9 +11,9 @@ A website that allows users to upload images and produces stylized output from t
 
 # What I Learned
 * Improved JS/HTML/CSS skills
-* Login/Authentication review
-* Understanding and use of convolution neural networks
-* Deep learning frameworks
+* Brush up on React skills and learn React Native, Context, and Hooks
+* Understanding and use of Tensorflow 2.x
+* Update Tensorflow 1.x to 2.x
 
 # Possible Future Updates
 * Multiple file type support

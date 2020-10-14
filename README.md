@@ -18,9 +18,9 @@ A website that allows users to upload images and produces stylized output from t
 # Possible Future Updates
 * User account creation and login
 * User history
-* Email notifications when new style has been processed
 * Multiple file type support
-* Image filters
+* User created styles
+* Email notifications when new style has been processed
 
 ## License
 Copyright (c) 2020 Michael Kramer. Released under GPLv3.

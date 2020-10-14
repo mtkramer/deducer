@@ -5,17 +5,20 @@ Image style auto-painter
 A website that allows users to upload images and produces stylized output from the image scan.
 
 # Features
-* User account registration and login
-* User histories
-* Email notifications when image processing has completed 
+* Sample images and styles
+* User image uploads
+* No database required
 
 # What I Learned
 * Improved JS/HTML/CSS skills
 * Brush up on React skills and learn React Native, Context, and Hooks
-* Understanding and use of Tensorflow 2.x
+* Understanding and use of Tensorflow
 * Update Tensorflow 1.x to 2.x
 
 # Possible Future Updates
+* User account creation and login
+* User history
+* Email notifications when new style has been processed
 * Multiple file type support
 * Image filters
 

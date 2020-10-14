@@ -1,3 +1,4 @@
+# Copyright (c) 2020-2021 Michael Kramer. Released under GPLv3.
 # Copyright (c) 2015-2019 Anish Athalye. Released under GPLv3.
 
 import tensorflow as tf

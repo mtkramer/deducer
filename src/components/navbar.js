@@ -15,9 +15,10 @@ class Navbar extends Component {
 
 export default Navbar;
 
+// Helper function to hide navbar on scroll
 function $(x) { return document.getElementById(x); }
 var pastOffset = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = () => {
     var currentOffset = window.pageYOffset;
     pastOffset > currentOffset ? $("navbar").style.left = "0" : $("navbar").style.left = "-110%";
     pastOffset = currentOffset;

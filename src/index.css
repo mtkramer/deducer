@@ -1,34 +1,38 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-decoration:none;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  margin:0;
-  padding:0;
-  overflow:hidden;
+  margin: 0;
+  padding: 0;
   background-color: darkslategray;
+  font-size: 2em;
 }
 
 .App {
   max-width: 100%;
   margin: 30px auto;
-  text-align: center;
 }
-nav{
+
+nav {
   text-align: left;
   padding: 5px;
   background-color: yellowgreen;
+  opacity: .8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: left 0.3s;
 }
-nav ul {
-  padding: 0;
+.navButton {
+  float: left;
+  color: darkslategray;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 15px;
 }
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
+.navButton:hover{
+  color: #fff;
 }

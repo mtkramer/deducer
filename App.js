@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
+import { styles } from "./styles";
 import About from "./components/about";
 import Navbar from "./components/navbar";
 import Samples from "./components/samples";
@@ -15,11 +16,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#2f4f4f',
-    padding: 40
-  }
-});

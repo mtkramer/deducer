@@ -1,20 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from "../styles";
 
 export default function Navbar() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home  Login  About  Contact us</Text>
+    <View style={styles.navBar}>
+      <Text style={styles.navText}>Home  Login  About  Contact us</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'yellowgreen',
-    opacity: .85
-  },
-  text: {
-    fontSize: 30
-  }
-});

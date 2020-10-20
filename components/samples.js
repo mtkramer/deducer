@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import { Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import { styles } from "../styles";
 
 export default function Samples() {
   const [samples] = useState([
@@ -10,7 +11,7 @@ export default function Samples() {
   ]);
 
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.samples}>
       {/* <FlatList
         data={samples}
         renderItem={({item}) => (
@@ -21,10 +22,3 @@ export default function Samples() {
     </TouchableOpacity>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    flexDirection: 'row'
-  }
-});

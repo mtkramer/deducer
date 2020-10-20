@@ -1,13 +1,21 @@
 import React from 'react';
-import { View, Text, Button, ScrollView } from 'react-native';
-import { styles } from '../styles';
+import { View, ScrollView, Button } from 'react-native';
+import { styles } from './styles';
 import About from "./about";
 import Samples from "./samples";
+import Presser from './presser';
 
 export const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.screen}>
-      <Button title="Login" color="yellowgreen" onPress={() => navigation.navigate('Login')} />
+      <Presser
+        title="LOGIN"
+        size="20"
+        color="white"
+        bgcolor="yellowgreen"
+        onPress={() => navigation.navigate('Login')}
+        width="25%"
+      />
       <ScrollView>
         <Samples />
         <About />
@@ -19,8 +27,26 @@ export const HomeScreen = ({ navigation }) => {
 export const LoginScreen = ({ navigation }) => {
   return (
     <View style={styles.screen}>
-      <Button title="Home" color="yellowgreen" onPress={() => navigation.navigate('Home')} />
-      <Text>Login Screen</Text>
+      <ScrollView>
+        <View style={styles.buttonContainer}>
+          <Presser
+            title="SIGN IN"
+            size="15"
+            color="white"
+            bgcolor="yellowgreen"
+            onPress={() => alert("Under Construction")}
+            width="50%"
+          />
+          <Presser
+            title="CREATE ACCOUNT"
+            size="15"
+            color="white"
+            bgcolor="yellowgreen"
+            onPress={() => alert("Under Construction")}
+            width="50%"
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 };

@@ -13,5 +13,10 @@ export const styles = StyleSheet.create({
   },
   about: {
     fontSize: 20
-  }
+  },
+  buttonContainer: {
+    flexDirection: 'column',
+    padding: 10,
+    margin: 20
+  },
 });

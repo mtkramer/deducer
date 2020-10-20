@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-class Samples extends Component {
-    render() {
-        return (
-            <span>
-                <img alt="sample 1, " src="/assets/machu-picchu-moray.jpg"></img>
-                <img alt="sample 2, "></img>
-                <img alt="sample 3, "></img>
-                <img alt="sample 4, "></img>
-            </span>
-        );
-    }
+export default function Samples() {
+    return (
+        <View style={styles.container}>
+            <Text>This is the image component</Text>
+        </View>
+    );
 }
 
-export default Samples;
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'white'
+    }
+});

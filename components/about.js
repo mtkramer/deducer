@@ -22,6 +22,6 @@ export default function About() {
 
 const styles = StyleSheet.create({
     container: {
-        fontSize: 30
+        fontSize: 20
     }
 });

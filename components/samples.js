@@ -1,11 +1,24 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
 
 export default function Samples() {
+    const [samples] = useState([
+        { key: '0', image: './assets/machu-picchu-moray.jpg' },
+        { key: '1', image: '' },
+        { key: '2', image: '' },
+        { key: '3', image: '' }
+    ]);
+
     return (
-        <View style={styles.container}>
-            <Text>This is the image component</Text>
-        </View>
+        <TouchableOpacity style={styles.container}>
+            {/* <FlatList
+                data={samples}
+                renderItem={({item}) => (
+                    <Image source={item.image} />
+                )}
+            /> */}
+            <Text>This is the image list</Text>
+        </TouchableOpacity>
     );
 }
 

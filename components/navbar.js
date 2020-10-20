@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Navbar() {
     return (
         <View style={styles.container}>
-            <Text>Home  Login  About  Contact us</Text>
+            <Text style={styles.text}>Home  Login  About  Contact us</Text>
         </View>
     );
 }
@@ -12,5 +12,8 @@ export default function Navbar() {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'yellowgreen'
+    },
+    text: {
+        fontSize: 30
     }
 });

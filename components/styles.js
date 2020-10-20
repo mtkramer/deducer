@@ -12,7 +12,8 @@ export const styles = StyleSheet.create({
     padding: 10
   },
   about: {
-    fontSize: 20
+    fontSize: 20,
+    marginVertical: 10
   },
   buttonContainer: {
     flexDirection: 'column',

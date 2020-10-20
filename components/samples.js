@@ -6,9 +6,9 @@ import { styles } from './styles';
 export default function Samples() {
   const [samples] = useState([
     { key: '0', image: '../assets/machu-picchu-moray.jpg' },
-    { key: '1', image: '' },
-    { key: '2', image: '' },
-    { key: '3', image: '' }
+    { key: '1', image: '../assets/crazy-2pt.jpg' },
+    { key: '2', image: '../assets/relativity.jpg' },
+    { key: '3', image: './assets/hyper-family.png' }
   ]);
 
   return (

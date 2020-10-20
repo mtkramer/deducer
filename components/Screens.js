@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, Button } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './styles';
 import About from "./about";
 import Samples from "./samples";
@@ -16,10 +16,8 @@ export const HomeScreen = ({ navigation }) => {
         onPress={() => navigation.navigate('Login')}
         width="25%"
       />
-      <ScrollView>
-        <Samples />
-        <About />
-      </ScrollView>
+      <Samples />
+      <About />
     </View>
   );
 };

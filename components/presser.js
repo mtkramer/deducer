@@ -5,7 +5,6 @@ export default function Presser({ title, size, color, bgcolor, onPress, width })
 
   const styles = StyleSheet.create({
     button: {
-      flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
       color: color,
@@ -20,11 +19,9 @@ export default function Presser({ title, size, color, bgcolor, onPress, width })
   });
 
   return (
-    <View style={{ width: width }}>
-      <TouchableOpacity onPress={onPress}>
-        <Text style={styles.button}>{title}</Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity onPress={onPress} style={{ width: width }}>
+      <Text style={styles.button}>{title}</Text>
+    </TouchableOpacity>
   );
 
 };

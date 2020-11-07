@@ -14,14 +14,14 @@ export default function Samples() {
   return (
     <View style={styles.samples}>
       <ScrollView horizontal={true}>
-        <FlatList
+        {/* <FlatList
           data={samples}
           renderItem={({ item }) =>
             <TouchableOpacity>
               <Image style={{ height: 125, width: 200, margin: 10 }} source={item.image} />
             </TouchableOpacity>
           }
-        />
+        /> */}
         <TouchableOpacity>
           <Image style={{ height: 125, width: 200, margin: 10 }} source={require('../assets/machu-picchu-moray.jpg')} />
         </TouchableOpacity>

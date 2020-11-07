@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default function Presser({ title, size, color, bgcolor, onPress, width }) {
 

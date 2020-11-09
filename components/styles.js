@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   header: {
     backgroundColor: 'yellowgreen',
-    height: 40
+    height: 60
   },
   screen: {
     flex: 1,

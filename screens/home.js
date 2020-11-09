@@ -67,7 +67,7 @@ export default function HomeScreen({ navigation }) {
 
 
 /*
-try custom stroll view for image carousel similar to:
+try custom scroll view for image carousel similar to:
   <ScrollView>
       {
         this.state.samples.map((item, index) => (

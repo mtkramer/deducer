@@ -11,7 +11,7 @@ export default function LoginScreen({ navigation }) {
       <View style={styles.buttonContainer}>
         <Presser
           title="SIGN IN"
-          size="15"
+          size="20"
           color="white"
           bgcolor="yellowgreen"
           onPress={() => alert("Under Construction")}
@@ -19,7 +19,7 @@ export default function LoginScreen({ navigation }) {
         />
         <Presser
           title="CREATE ACCOUNT"
-          size="15"
+          size="20"
           color="white"
           bgcolor="yellowgreen"
           onPress={() => alert("Under Construction")}

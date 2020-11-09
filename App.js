@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -16,15 +17,17 @@ export default function App() {
           name="Home"
           component={HomeScreen}
           options={{
-            title: 'Welcome to Deducer',
-            headerStyle: styles.header
+            title: 'WELCOME TO DEDUCER',
+            headerStyle: styles.header,
+            headerTintColor: 'white'
           }} />
         <Stack.Screen
           name="Login"
           component={LoginScreen}
           options={{
             title: 'Login or Create Account',
-            headerStyle: styles.header
+            headerStyle: styles.header,
+            headerTintColor: 'white'
           }}
         />
       </Stack.Navigator>

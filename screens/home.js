@@ -27,7 +27,7 @@ export default function HomeScreen({ navigation }) {
           data={samples}
           renderItem={({ item }) => (
             <TouchableOpacity>
-              <Image style={{ height: 125, width: 200, margin: 10 }} source={{ item.image }} />
+              <Image style={{ height: 125, width: 200, margin: 10 }} source={item['image']} />
             </TouchableOpacity>
           )}
         /> */}
@@ -64,3 +64,15 @@ export default function HomeScreen({ navigation }) {
   );
 
 }
+
+
+/*
+try custom stroll view for image carousel similar to:
+  <ScrollView>
+      {
+        this.state.samples.map((item, index) => (
+          <Image key={item.id} style={{ height: 125, width: 200, margin: 10 }} source={require(item['image'])}>
+        ))
+      }
+  </ScrollView>
+*/

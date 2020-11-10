@@ -15,18 +15,18 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.screen}>
+      <ScrollView>
+        <Presser
+          title="LOGIN"
+          size="20"
+          color="white"
+          bgcolor="yellowgreen"
+          onPress={() => navigation.navigate('Login')}
+          width="25%"
+        />
 
-      <Presser
-        title="LOGIN"
-        size="20"
-        color="white"
-        bgcolor="yellowgreen"
-        onPress={() => navigation.navigate('Login')}
-        width="25%"
-      />
-
-      <ScrollView horizontal={true}>
-        {/* <FlatList
+        <ScrollView horizontal={true}>
+          {/* <FlatList
           data={samples}
           renderItem={({ item }) => (
             <TouchableOpacity>
@@ -34,21 +34,20 @@ export default function HomeScreen({ navigation }) {
             </TouchableOpacity>
           )}
         /> */}
-        <TouchableOpacity>
-          <Image style={styles.sample} source={require('../assets/machu-picchu-moray.jpg')} />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image style={{ height: 125, width: 200, margin: 10 }} source={require('../assets/crazy-2pt.jpg')} />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image style={{ height: 125, width: 200, margin: 10 }} source={require('../assets/relativity.jpg')} />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image style={{ height: 125, width: 200, margin: 10 }} source={require('../assets/hyper-family.png')} />
-        </TouchableOpacity>
-      </ScrollView>
+          <TouchableOpacity>
+            <Image style={styles.sample} source={require('../assets/machu-picchu-moray.jpg')} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image style={styles.sample} source={require('../assets/crazy-2pt.jpg')} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image style={styles.sample} source={require('../assets/relativity.jpg')} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image style={styles.sample} source={require('../assets/hyper-family.png')} />
+          </TouchableOpacity>
+        </ScrollView>
 
-      <ScrollView>
         <Text style={styles.about}>
           Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -63,8 +62,8 @@ export default function HomeScreen({ navigation }) {
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </Text>
-      </ScrollView>
 
+      </ScrollView>
     </View>
   );
 

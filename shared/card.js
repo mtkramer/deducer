@@ -6,10 +6,9 @@ export default function Card(props) {
   const styles = StyleSheet.create({
     card: {
       borderRadius: 3,
-      elevation: 3,
-      shadowOffset: { width: 10, height: 10 },
-      // shadowColor: '#333',
-      // shadowOpacity: .75,
+      shadowOffset: { width: 3, height: 3 },
+      shadowColor: '#ccc',
+      shadowOpacity: .75
     }
   });
 

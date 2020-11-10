@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 
 export default function Presser({ title, size, color, bgcolor, onPress, width }) {
 
@@ -12,19 +12,25 @@ export default function Presser({ title, size, color, bgcolor, onPress, width })
       backgroundColor: bgcolor,
       paddingVertical: 5,
       paddingHorizontal: 10,
-      fontWeight: '500',
+      fontWeight: '500'
+    },
+    shadow: {
+      width: width,
       marginVertical: 10,
       borderRadius: 3,
-      shadowOffset: { width: 2, height: 2 },
+      shadowOffset: { width: 3, height: 3 },
       shadowColor: '#333',
-      shadowOpacity: .75
+      shadowOpacity: 0.3,
+      shadowRadius: 3
     }
   });
 
   return (
-    <TouchableOpacity onPress={onPress} style={{ width: width }}>
-      <Text style={styles.button}>{title}</Text>
-    </TouchableOpacity>
+    <View style={styles.shadow}>
+      <TouchableOpacity onPress={onPress}>
+        <Text style={styles.button}>{title}</Text>
+      </TouchableOpacity>
+    </View>
   );
 
 };

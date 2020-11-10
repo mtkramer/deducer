@@ -14,10 +14,7 @@ export const styles = StyleSheet.create({
     height: 125,
     width: 200,
     margin: 10,
-    borderRadius: 3,
-    shadowOffset: { width: 2, height: 2 },
-    shadowColor: '#333',
-    shadowOpacity: .75
+    borderRadius: 3
   },
   about: {
     fontSize: 20,

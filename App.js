@@ -1,10 +1,10 @@
 import 'react-native-gesture-handler';  // must be at top or nav gets cranky
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator, HeaderBackButton } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/home';
 import LoginScreen from './screens/login';
-import { styles } from "./components/styles";
+import { styles } from "./shared/styles";
 
 const Stack = createStackNavigator();
 

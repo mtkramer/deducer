@@ -10,10 +10,14 @@ export const styles = StyleSheet.create({
     backgroundColor: '#c0c0c0da',
     padding: 40
   },
-  samples: {
-    backgroundColor: 'white',
-    flexDirection: 'row',
-    padding: 10
+  sample: {
+    height: 125,
+    width: 200,
+    margin: 10,
+    borderRadius: 3,
+    shadowOffset: { width: 2, height: 2 },
+    shadowColor: '#333',
+    shadowOpacity: .75
   },
   about: {
     fontSize: 20,
@@ -23,5 +27,5 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     padding: 10,
     margin: 20
-  },
+  }
 });

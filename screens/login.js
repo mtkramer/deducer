@@ -1,13 +1,14 @@
-import { styles } from '../components/styles';
+import { styles } from '../shared/styles';
 import React from 'react';
 import { View } from 'react-native';
-import Presser from '../components/presser';
+import Presser from '../shared/presser';
 
 
 export default function LoginScreen({ navigation }) {
 
   return (
     <View style={styles.screen}>
+
       <View style={styles.buttonContainer}>
         <Presser
           title="SIGN IN"
@@ -26,6 +27,7 @@ export default function LoginScreen({ navigation }) {
           width="50%"
         />
       </View>
+
     </View>
   );
 

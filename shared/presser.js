@@ -15,6 +15,9 @@ export default function Presser({ title, size, color, bgcolor, onPress, width })
       fontWeight: '500',
       marginVertical: 10,
       borderRadius: 3,
+      shadowOffset: { width: 2, height: 2 },
+      shadowColor: '#333',
+      shadowOpacity: .75
     }
   });
 

@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler';  // must be at top or nav gets cranky
+import 'react-native-gesture-handler';  // must be at top or @react-navigation gets cranky
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

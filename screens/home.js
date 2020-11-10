@@ -1,17 +1,11 @@
-import { styles } from '../shared/styles';
-import React, { useState } from 'react';
-import { Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
-import { ScrollView } from "react-native-gesture-handler";
+import { styles, samples } from '../shared/styles';
+import React from 'react';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
+import { FlatList, ScrollView } from "react-native-gesture-handler";
 import Presser from '../shared/presser';
-import Card from "../shared/card";
+
 
 export default function HomeScreen({ navigation }) {
-  const [samples] = useState([
-    { image: '../assets/machu-picchu-moray.jpg', key: '0' },
-    { image: '../assets/crazy-2pt.jpg', key: '1' },
-    { image: '../assets/relativity.jpg', key: '2' },
-    { image: '../assets/hyper-family.png', key: '3' }
-  ]);
 
   return (
     <View style={styles.screen}>
@@ -25,16 +19,16 @@ export default function HomeScreen({ navigation }) {
           width="25%"
         />
 
-        <ScrollView horizontal={true}>
-          {/* <FlatList
-          data={samples}
-          renderItem={({ item }) => (
-            <TouchableOpacity>
-              <Image style={{ height: 125, width: 200, margin: 10 }} source={item['image']} />
-            </TouchableOpacity>
-          )}
-        /> */}
-          <TouchableOpacity>
+        <ScrollView horizontal={true} style={{ flex: 1, flexDirection: "row" }}>
+          <FlatList
+            data={samples}
+            renderItem={({ item, index }) => (
+              <TouchableOpacity>
+                <Image style={styles.sample} source={item[index]} />
+              </TouchableOpacity>
+            )}
+          />
+          {/* <TouchableOpacity>
             <Image style={styles.sample} source={require('../assets/machu-picchu-moray.jpg')} />
           </TouchableOpacity>
           <TouchableOpacity>
@@ -45,7 +39,7 @@ export default function HomeScreen({ navigation }) {
           </TouchableOpacity>
           <TouchableOpacity>
             <Image style={styles.sample} source={require('../assets/hyper-family.png')} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </ScrollView>
 
         <Text style={styles.about}>

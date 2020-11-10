@@ -26,3 +26,10 @@ export const styles = StyleSheet.create({
     margin: 20
   }
 });
+
+export const samples = [
+  { '0': require('../assets/machu-picchu-moray.jpg') },
+  { '1': require('../assets/crazy-2pt.jpg') },
+  { '2': require('../assets/relativity.jpg') },
+  { '3': require('../assets/hyper-family.png') }
+];

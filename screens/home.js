@@ -19,16 +19,21 @@ export default function HomeScreen({ navigation }) {
           width="25%"
         />
 
-        <ScrollView horizontal={true} style={{ flex: 1, flexDirection: "row" }}>
-          <FlatList
-            data={samples}
-            renderItem={({ item, index }) => (
-              <TouchableOpacity>
-                <Image style={styles.sample} source={item[index]} />
-              </TouchableOpacity>
-            )}
-          />
-          {/* <TouchableOpacity>
+        <FlatList
+          horizontal={true}
+          data={samples}
+          renderItem={({ item, index }) =>
+            <TouchableOpacity>
+              <Image key={index} style={styles.sample} source={item[index]} />
+            </TouchableOpacity>
+          }
+          ItemSeparatorComponent={() =>
+            <View style={{ height: "100%", width: 20, backgroundColor: "#c0c0c0da", }} />
+          }
+          keyExtractor={(item, index) => index.toString()}
+        />
+
+        {/* <TouchableOpacity>
             <Image style={styles.sample} source={require('../assets/machu-picchu-moray.jpg')} />
           </TouchableOpacity>
           <TouchableOpacity>
@@ -40,7 +45,6 @@ export default function HomeScreen({ navigation }) {
           <TouchableOpacity>
             <Image style={styles.sample} source={require('../assets/hyper-family.png')} />
           </TouchableOpacity> */}
-        </ScrollView>
 
         <Text style={styles.about}>
           Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

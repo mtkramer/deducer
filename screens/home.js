@@ -28,23 +28,14 @@ export default function HomeScreen({ navigation }) {
             </TouchableOpacity>
           }
           ItemSeparatorComponent={() =>
-            <View style={{ height: "100%", width: 20, backgroundColor: "#c0c0c0da", }} />
+            <View style={{ height: "100%", width: 20, opacity: 0.0, }} />
           }
           keyExtractor={(item, index) => index.toString()}
         />
 
-        {/* <TouchableOpacity>
-            <Image style={styles.sample} source={require('../assets/machu-picchu-moray.jpg')} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Image style={styles.sample} source={require('../assets/crazy-2pt.jpg')} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Image style={styles.sample} source={require('../assets/relativity.jpg')} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Image style={styles.sample} source={require('../assets/hyper-family.png')} />
-          </TouchableOpacity> */}
+        <Text style={styles.about}>
+          Select an image above and a style below to transform the image.
+        </Text>
 
         <Text style={styles.about}>
           Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -67,14 +58,3 @@ export default function HomeScreen({ navigation }) {
 
 }
 
-
-/*
-try custom scroll view for image carousel similar to:
-  <ScrollView>
-      {
-        this.state.samples.map((item, index) => (
-          <Image key={item.id} style={{ height: 125, width: 200, margin: 10 }} source={require(item['image'])}>
-        ))
-      }
-  </ScrollView>
-*/

@@ -2,7 +2,7 @@
 (under construction) Image style auto-painter using React Native and neural-style. LaunchCode Liftoff capstone project.
 
 # About
-Uses react-native to produce cross-platform web app and Tensorflow 2.x.
+Uses React-Native to produce cross-platform web app and Tensorflow 2.x.
 
 # Todo
 * Update tensorflow from current 1.x
